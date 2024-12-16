@@ -1,8 +1,8 @@
 class Card():
-    def __init__(self, face: str, suit: str, value: int):
+    def __init__(self, face: str, suit: str, strength: int):
         self.face = face
         self.suit = suit
-        self.value = value
+        self.strength = strength
 
 
 class Deck():
@@ -16,7 +16,7 @@ def main():
     
 
 def create_cards():
-    suits = ["Diamond", "Heart", "Spade", "Club"]
+    suits = ["♢", "♡", "♠️", "♣️"]
     faces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
     card_list = []
     for suit in suits:
