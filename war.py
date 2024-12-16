@@ -1,8 +1,13 @@
 class Card():
-    ...
+    def __init__(self, face: str, suit: str, value: int):
+        self.face = face
+        self.suit = suit
+        self.value = value
+
 
 class Deck():
     ...
+
 
 def main():
     #Create list of 52 cards
@@ -10,7 +15,15 @@ def main():
     #Splits cards into user and cpu decks.
     
 
-
+def create_cards():
+    suits = ["Diamond", "Heart", "Spade", "Club"]
+    faces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+    card_list = []
+    for suit in suits:
+        for face in faces:
+            card = Card(face, suit, faces.index(face))
+            card_list.append(card)
+    return card_list
 
 
 if __name__ == "__main__":
